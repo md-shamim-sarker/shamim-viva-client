@@ -72,7 +72,9 @@ const Navbar = () => {
                         <span>Profile</span>
                     </NavLink>
                 </div>
-                <Sidebar></Sidebar>
+                {
+                    toggle && <Sidebar></Sidebar>
+                }
             </div>
         </div>
     );

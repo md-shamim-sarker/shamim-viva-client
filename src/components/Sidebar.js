@@ -1,11 +1,38 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {NavLink} from 'react-router-dom';
+import {AuthContext} from '../contexts/UserContext';
 
 const Sidebar = () => {
+    const {setToggle} = useContext(AuthContext);
     return (
-        <div className='bg-blue-100 w-3/5 lg:w-1/6 h-[87vh] lg:h-[92vh] fixed top-[6vh] lg:top-[8vh] left-0 p-4'>
+        <div className='bg-blue-100 w-3/5 lg:w-1/6 h-[87vh] lg:h-[92vh] fixed top-[6vh] lg:top-[8vh] left-0 p-4 overflow-y-auto'>
             <h2 className='text-2xl font-bold text-center'>All Topics</h2>
-            <div className='flex flex-col gap-1'>
+            <div onClick={() => setToggle(false)} className='flex flex-col gap-1'>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
+                <NavLink to={"/"}>Link Item</NavLink>
                 <NavLink to={"/"}>Link Item</NavLink>
                 <NavLink to={"/"}>Link Item</NavLink>
                 <NavLink to={"/"}>Link Item</NavLink>
