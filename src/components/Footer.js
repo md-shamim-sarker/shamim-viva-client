@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Link} from 'react-router-dom';
 import {FaFacebook, FaGithub, FaLinkedin} from 'react-icons/fa';
+import {AuthContext} from '../contexts/UserContext';
 
 const Footer = () => {
+    const {setToggle, dark} = useContext(AuthContext);
     return (
-        <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
+        <footer onClick={() => setToggle(false)} className={`footer footer-center p-10 rounded ${dark ? 'navFooterDark' : 'navFooterLight'}`}>
             <div className="grid grid-flow-col gap-4">
                 <Link to={"/"}>Home</Link>
                 <Link to={"/"}>About</Link>

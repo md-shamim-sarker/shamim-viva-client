@@ -5,11 +5,11 @@ import Navbar from '../components/Navbar';
 import {AuthContext} from '../contexts/UserContext';
 
 const Main = () => {
-    const {setToggle} = useContext(AuthContext);
+    const {setToggle, dark} = useContext(AuthContext);
     return (
         <div>
             <Navbar></Navbar>
-            <div onClick={() => setToggle(false)} className="pt-20 pb-10">
+            <div onClick={() => setToggle(false)} className={`pt-20 pb-10 ${dark ? 'dark' : 'light'}`}>
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>

@@ -1,9 +1,8 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import {Link, NavLink} from 'react-router-dom';
 import interview from '../assets/interview.svg';
-import {AiFillContacts, AiOutlineMenuUnfold} from 'react-icons/ai';
+import {AiFillContacts, AiOutlineClose, AiOutlineMenuUnfold} from 'react-icons/ai';
 import {FaHome} from 'react-icons/fa';
-import {GrClose} from 'react-icons/gr';
 import {MdOutlineContactMail} from 'react-icons/md';
 import {ImProfile} from 'react-icons/im';
 import {BsFillMoonFill, BsFillSunFill} from 'react-icons/bs';
@@ -11,16 +10,15 @@ import {AuthContext} from '../contexts/UserContext';
 import Sidebar from './Sidebar';
 
 const Navbar = () => {
-    const {toggle, setToggle} = useContext(AuthContext);
-    const [night, setNight] = useState(false);
-    console.log(night);
+    const {toggle, setToggle, dark, setDark} = useContext(AuthContext);
+    console.log(dark);
     return (
-        <div className='w-full fixed top-0 z-20'>
-            <div className='flex items-center justify-between bg-base-200 px-4 h-[6vh] lg:h-[8vh]'>
+        <div className={`w-full fixed top-0 z-20 ${dark ? 'navFooterDark' : 'navFooterLight'}`}>
+            <div className='flex items-center justify-between px-4 h-[6vh] lg:h-[8vh]'>
                 <div className='flex items-center gap-1'>
                     {
                         toggle
-                            ? <GrClose onClick={() => setToggle(false)} className='text-2xl'></GrClose>
+                            ? <AiOutlineClose onClick={() => setToggle(false)} className='text-2xl'></AiOutlineClose>
                             : <AiOutlineMenuUnfold onClick={() => setToggle(true)} className='text-2xl'></AiOutlineMenuUnfold>
                     }
                     <img src={interview} alt="..." className='w-10 h-10' />
@@ -46,9 +44,9 @@ const Navbar = () => {
                 </div>
                 <div className='flex items-center gap-2'>
                     <label className="swap swap-rotate">
-                        <input onClick={() => setNight(!night)} type="checkbox" />
-                        <BsFillSunFill className="swap-on fill-current w-6 h-6 text-orange-500"></BsFillSunFill>
-                        <BsFillMoonFill className="swap-off fill-current w-6 h-6"></BsFillMoonFill>
+                        <input onClick={() => setDark(!dark)} type="checkbox" />
+                        <BsFillSunFill className="swap-off fill-current w-6 h-6 text-orange-500"></BsFillSunFill>
+                        <BsFillMoonFill className="swap-on fill-current w-6 h-6"></BsFillMoonFill>
                     </label>
                     <Link className='btn btn-primary btn-sm'>
                         Login

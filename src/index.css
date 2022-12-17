@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .dark {
+        @apply bg-gray-700 text-gray-100
+    }
+
+    .light {
+        @apply bg-gray-100 text-gray-800
+    }
+
+    .navFooterDark {
+        @apply bg-gray-800 text-gray-100
+    }
+
+    .navFooterLight {
+        @apply bg-gray-200 text-gray-800
+    }
+}
