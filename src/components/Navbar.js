@@ -1,11 +1,12 @@
 import React, {useContext} from 'react';
 import {Link, NavLink} from 'react-router-dom';
 import interview from '../assets/interview.svg';
-import {AiFillContacts, AiOutlineClose, AiOutlineMenuUnfold} from 'react-icons/ai';
+import {AiOutlineClose, AiOutlineMenuUnfold} from 'react-icons/ai';
 import {FaHome} from 'react-icons/fa';
-import {MdOutlineContactMail} from 'react-icons/md';
+import {MdAddCall, MdOutlineContactMail} from 'react-icons/md';
 import {ImProfile} from 'react-icons/im';
 import {BsFillMoonFill, BsFillSunFill} from 'react-icons/bs';
+import {HiOutlineViewGridAdd} from 'react-icons/hi';
 import {AuthContext} from '../contexts/UserContext';
 import Sidebar from './Sidebar';
 
@@ -26,20 +27,24 @@ const Navbar = () => {
                 </div>
                 <div className='hidden lg:flex gap-5'>
                     <NavLink to={"/"} className="flex items-center gap-1">
-                        <FaHome>Home</FaHome>
+                        <FaHome className='text-xl'></FaHome>
                         <span>Home</span>
                     </NavLink>
-                    <NavLink to={"/"} className="flex items-center gap-1">
-                        <MdOutlineContactMail>About</MdOutlineContactMail>
+                    <NavLink to={"/about"} className="flex items-center gap-1">
+                        <MdOutlineContactMail className='text-xl'></MdOutlineContactMail>
                         <span>About</span>
                     </NavLink>
-                    <NavLink to={"/"} className="flex items-center gap-1">
-                        <AiFillContacts>Contact</AiFillContacts>
+                    <NavLink to={"/contact"} className="flex items-center gap-1">
+                        <MdAddCall className='text-[1.2rem]'></MdAddCall>
                         <span>Contact</span>
                     </NavLink>
-                    <NavLink to={"/"} className="flex items-center gap-1">
-                        <ImProfile>Profile</ImProfile>
+                    <NavLink to={"/profile"} className="flex items-center gap-1">
+                        <ImProfile className='text-[1.2rem]'></ImProfile>
                         <span>Profile</span>
+                    </NavLink>
+                    <NavLink to={"/addNote"} className="flex items-center gap-1">
+                        <HiOutlineViewGridAdd className='text-xl'></HiOutlineViewGridAdd>
+                        <span>New</span>
                     </NavLink>
                 </div>
                 <div className='flex items-center gap-2'>
@@ -48,26 +53,30 @@ const Navbar = () => {
                         <BsFillSunFill className="swap-off fill-current w-6 h-6 text-orange-500"></BsFillSunFill>
                         <BsFillMoonFill className="swap-on fill-current w-6 h-6"></BsFillMoonFill>
                     </label>
-                    <Link className='btn btn-primary btn-sm'>
+                    <Link to={"/login"} className='btn btn-primary btn-sm'>
                         Login
                     </Link>
                 </div>
                 <div className='btm-nav lg:hidden z-50 h-[8vh]'>
                     <NavLink to={"/"} className={dark ? 'navMobileDark' : 'navMobileLight'}>
-                        <FaHome>Home</FaHome>
+                        <FaHome></FaHome>
                         <span>Home</span>
                     </NavLink>
                     <NavLink to={"/about"} className={dark ? 'navMobileDark' : 'navMobileLight'}>
-                        <MdOutlineContactMail>About</MdOutlineContactMail>
+                        <MdOutlineContactMail></MdOutlineContactMail>
                         <span>About</span>
                     </NavLink>
-                    <NavLink to={"/"} className={dark ? 'navMobileDark' : 'navMobileLight'}>
-                        <AiFillContacts>Contact</AiFillContacts>
+                    <NavLink to={"/contact"} className={dark ? 'navMobileDark' : 'navMobileLight'}>
+                        <MdAddCall></MdAddCall>
                         <span>Contact</span>
                     </NavLink>
-                    <NavLink to={"/"} className={dark ? 'navMobileDark' : 'navMobileLight'}>
-                        <ImProfile>Profile</ImProfile>
+                    <NavLink to={"/profile"} className={dark ? 'navMobileDark' : 'navMobileLight'}>
+                        <ImProfile></ImProfile>
                         <span>Profile</span>
+                    </NavLink>
+                    <NavLink to={"/addNote"} className={dark ? 'navMobileDark' : 'navMobileLight'}>
+                        <HiOutlineViewGridAdd></HiOutlineViewGridAdd>
+                        <span>New</span>
                     </NavLink>
                 </div>
                 {
