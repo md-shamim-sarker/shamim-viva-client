@@ -4,7 +4,7 @@ import interview from '../assets/interview.svg';
 const Home = () => {
     return (
         <div>
-            <div className="hero">
+            <div className="hero py-10">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img src={interview} className="w-full lg:w-1/2 rounded-lg" alt='...' />
                     <div className='w-full lg:w-1/2'>
