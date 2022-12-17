@@ -52,20 +52,20 @@ const Navbar = () => {
                         Login
                     </Link>
                 </div>
-                <div className="btm-nav lg:hidden z-50 h-[7vh]">
-                    <NavLink to={"/"}>
+                <div className='btm-nav lg:hidden z-50 h-[8vh]'>
+                    <NavLink to={"/"} className={dark ? 'navMobileDark' : 'navMobileLight'}>
                         <FaHome>Home</FaHome>
                         <span>Home</span>
                     </NavLink>
-                    <NavLink to={"/"}>
+                    <NavLink to={"/about"} className={dark ? 'navMobileDark' : 'navMobileLight'}>
                         <MdOutlineContactMail>About</MdOutlineContactMail>
                         <span>About</span>
                     </NavLink>
-                    <NavLink to={"/"}>
+                    <NavLink to={"/"} className={dark ? 'navMobileDark' : 'navMobileLight'}>
                         <AiFillContacts>Contact</AiFillContacts>
                         <span>Contact</span>
                     </NavLink>
-                    <NavLink to={"/"}>
+                    <NavLink to={"/"} className={dark ? 'navMobileDark' : 'navMobileLight'}>
                         <ImProfile>Profile</ImProfile>
                         <span>Profile</span>
                     </NavLink>

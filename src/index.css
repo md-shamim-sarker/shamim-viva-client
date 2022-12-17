@@ -18,4 +18,12 @@
     .navFooterLight {
         @apply bg-gray-200 text-gray-800
     }
+
+    .navMobileDark {
+        @apply bg-gray-900 text-gray-200
+    }
+
+    .navMobileLight {
+        @apply bg-gray-300 text-gray-900
+    }
 }

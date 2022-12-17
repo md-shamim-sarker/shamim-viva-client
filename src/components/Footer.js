@@ -6,7 +6,7 @@ import {AuthContext} from '../contexts/UserContext';
 const Footer = () => {
     const {setToggle, dark} = useContext(AuthContext);
     return (
-        <footer onClick={() => setToggle(false)} className={`footer footer-center p-10 rounded ${dark ? 'navFooterDark' : 'navFooterLight'}`}>
+        <footer onClick={() => setToggle(false)} className={`footer footer-center p-10 ${dark ? 'navFooterDark' : 'navFooterLight'}`}>
             <div className="grid grid-flow-col gap-4">
                 <Link to={"/"}>Home</Link>
                 <Link to={"/"}>About</Link>
