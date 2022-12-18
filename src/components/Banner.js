@@ -9,11 +9,11 @@ const Banner = () => {
                 <div className="w-full lg:w-4/5 mx-auto lg:-mt-12 bg-blue-800 text-gray-100 p-10 lg:p-16 text-center">
                     <div className="space-y-2">
                         <h2 className="inline-block text-2xl font-semibold sm:text-3xl">The Best Activewear from the Nordstrom Anniversary Sale</h2>
-                        <p className="text-xs">By
+                        <div className="text-xs">By
                             <p className="text-xs hover:underline">Leroy Jenkins</p>
-                        </p>
+                        </div>
                     </div>
-                    <div className="dark:text-gray-100">
+                    <div className="text-gray-100">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, maxime saepe? </p>
                     </div>
                 </div>

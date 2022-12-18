@@ -5,7 +5,6 @@ export const AuthContext = createContext();
 const UserContext = ({children}) => {
     const [toggle, setToggle] = useState(false);
     const [dark, setDark] = useState(false);
-
     const authInfo = {
         toggle,
         setToggle,

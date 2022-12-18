@@ -12,7 +12,6 @@ import Sidebar from './Sidebar';
 
 const Navbar = () => {
     const {toggle, setToggle, dark, setDark} = useContext(AuthContext);
-    console.log(dark);
     return (
         <div className={`w-full fixed top-0 z-20 ${dark ? 'navFooterDark' : 'navFooterLight'}`}>
             <div className='flex items-center justify-between px-4 h-[6vh] lg:h-[8vh]'>
